@@ -188,5 +188,14 @@ Don’t be another Elon. »
         </ul>
     </div>
 </section>
+
+	<script>
+  window.addEventListener("scroll", function () {
+    const headerImage = document.querySelector(".parallax-img");
+    const speed = 0.4;
+    const offset = window.pageYOffset;
+    headerImage.style.transform = `translateY(${offset * speed}px)`;
+  });
+</script>
 </body>
 </html>
