@@ -150,17 +150,13 @@ Don’t be another Elon. »
 </audio>
 
 <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const music = document.getElementById("bg-music");
-    const playPromise = music.play();
+  const music = document.getElementById("bg-music");
+  function startMusic() {
+    music.play();
+    document.removeEventListener("click", startMusic);
+  }
 
-    if (playPromise !== undefined) {
-      playPromise.catch(error => {
-        console.log("Autoplay blocked. User interaction is required.");
-   
-      });
-    }
-  });
+  document.addEventListener("click", startMusic);
 </script>
 
  <!--contact page// no longer needed -->
