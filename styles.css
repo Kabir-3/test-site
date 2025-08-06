@@ -138,11 +138,14 @@ nav ul li a:hover, .logo a:hover {
 }
 
 .carousel-content {
-    max-width: 800px;
-	position: relative;
-	bottom: 50px;
-	left: 50%;
-	transform: translateX(-50%);
+  position: absolute;
+  top: 70%; /* Pushes the content lower */
+  left: 50%;
+  transform: translateX(-50%); /* Only center horizontally */
+  text-align: center;
+  z-index: 2;
+  color: white;
+}
 }
 
 .carousel-content h2 {
