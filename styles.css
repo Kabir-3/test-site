@@ -1,0 +1,373 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Halant;
+}
+
+header {
+    background-color: #504c67;
+    color: #fff;
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	font-size: 1.4rem;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover, .logo a:hover {
+    color: #ffd700;
+}
+
+
+/* Add this CSS to your existing styles.css file */
+
+/* Hamburger menu styles */
+.mobile-toggle {
+    display: none; /* Hide checkbox by default */
+}
+
+.mobile-menu {
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 30px;
+    height: 20px;
+	margin-top: 10px;
+    margin: 3px 5px;
+}
+
+/* Mobile navigation styles */
+.mobile-nav {
+    display: none; /* Hide mobile navigation by default */
+}
+
+.mobile-nav ul {
+    padding: 0;
+}
+
+.mobile-nav li {
+    display: block; /* Display list items as blocks */
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+/* Show mobile navigation when checkbox is checked */
+.mobile-toggle:checked ~ .mobile-nav {
+    display: block;
+}
+
+
+.line {
+    width: 120%;
+    height: 4px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+
+/* Show desktop navigation on screens with minimum width 768px */
+@media screen and (min-width: 768px) {
+    .desktop-nav {
+        display: block;
+    }
+
+    /* Hide hamburger menu on desktop screens */
+    .mobile-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Show hamburger menu on mobile screens */
+    .mobile-menu {
+        display: block;
+    }
+}
+
+/* Add this to styles.css CAROUSEL*/
+
+#carousel {
+    background-image: url('joshua.png'); /* Replace 'carousel_image.jpg' with your image */
+    background-size: cover;
+    background-position:center center;
+    text-align: center;
+    color: #fff;
+	height: 100vh;
+    padding: 10px 0;
+	position: relative;
+	display: flex; /* Use flexbox */
+	flex-direction: column; /* Stack items vertically */
+    justify-content: flex-end; /* Align items to the bottom */
+}
+
+.carousel-content {
+    max-width: 800px;
+	position: relative;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.carousel-content h2 {
+    font-size: 3.25rem;
+	font-family: Halant;
+    margin-bottom: 1px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0); /* Add shadow to the text */
+}
+
+.carousel-content {
+    font-size: 2rem;
+	font-family: Halant;
+    margin-bottom: 5px;
+	/*background-color: rgba(0, 0, 0, 0.5); /* Set background color with transparency */
+   /*padding: 1px 1px; /* Add padding for spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0); /* Add shadow to the text */
+}
+
+.carousel-content .btn {
+	font-size: 1.25rem;
+	font-family: Halant;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #867fab;
+    color: #fff	;
+    text-decoration: none;
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0); /* Add shadow to the text */
+}
+
+.carousel-content .btn:hover {
+    opacity: 0.75;
+}
+
+
+/* Add this to styles.css  ABOUT*/
+
+#about {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.about-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify; /* Align text within the container to the left */
+}
+
+.about-content img {
+    width: auto;
+    height: 35vh;
+    margin-right: 75px;
+	box-shadow: 0 0 40px rgba(134, 127, 171, 0.5);
+}
+
+.about-details {
+    text-align: justify; /* Align text within the details container to the left */
+    flex: 1;
+}
+
+.about-details p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items vertically */
+    }
+
+    .about-content img {
+        margin-right: 0; /* Remove right margin on small screens */
+        margin-bottom: 20px; /* Add bottom margin to separate image and text */
+    }
+}
+
+
+/* Add this to styles.css  PUBLICATION*/
+
+#publications {
+    text-align: center;
+    padding: 60px 0;
+	background-color: #f1f2f6;
+}
+
+#publications h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+#publications h3 {
+    text-align: center;
+    font-size: 1.5em;
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#publications h4 {
+    text-align: center;
+    font-size: 1em;
+	margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.publication-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.publication-details {
+	font-size: 1rem;
+	text-align: center;
+	margin-top: 5px;
+}
+
+
+.publication-button {
+    border: 1 px solid black;
+    padding: 10px 20px; /* Adjust padding as needed */
+	border-radius: 13px; /* Add border radius for rounded corners */
+    background: none;
+    cursor: pointer;
+    display: flex;
+	    font-family: Halant;
+
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: justify; /* Align text to the left within the button */
+}
+
+.publication-button:hover {
+    opacity: 0.8;
+	background-color: #b6b2cd;
+}
+
+.publication-button img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.publication-button .publication-details {
+    flex: 1;
+}
+
+.publication-button h3 {
+    font-size: 1.5rem;
+}
+
+.publication-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.publication-list li {
+    margin-bottom: 10px;
+}
+
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .publication-button {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items vertically */
+    }
+
+    .publication-button img {
+        margin-right: 0; /* Remove right margin on small screens */
+        margin-bottom: 5px; /* Add bottom margin to separate image and text */
+    }
+}
+
+
+/* Add this to styles.css */
+
+
+
+.thumbnail {
+    /*width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 10px;
+	box-shadow: 0 0 40px rgba(134, 127, 171, 0.5);
+}
+
+.publication-details {
+    flex: 1;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #0077b5;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #005983;
+}
+
+
+@font-face {
+  font-family: 'Halant';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/halant/v14/u-4-0qaujRI2Pbsn2NhnsS5mew.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

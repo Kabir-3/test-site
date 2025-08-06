@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+function closeMobileMenu() {
+    document.getElementById("mobile-toggle").checked = false;
+}
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udayan Das</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#" onclick="closeMobileMenu()">Udayan Das</a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#publications">Publications</a></li>
+					<!--<li><a href="#research">Research</a></li>
+                    <li><a href="#writing">Writing</a></li>
+                    <li><a href="#photography">Photography</a></li>
+					<li><a href="#news">News</a></li>-->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+			
+			<input type="checkbox" id="mobile-toggle" class="mobile-toggle">
+            <label for="mobile-toggle" class="mobile-menu">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+				</div>
+            </label>
+            <!-- Mobile navigation (hidden by default) -->
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+                    <li><a href="#publications" onclick="closeMobileMenu()">Publications</a></li>
+                    <!--li><a href="#research" onclick="closeMobileMenu()">Research</a></li>
+                    <li><a href="#writing" onclick="closeMobileMenu()">Writing</a></li>
+                    <li><a href="#photography" onclick="closeMobileMenu()">Photography</a></li>
+                    <li><a href="#news" onclick="closeMobileMenu()">News</a></li-->
+                    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Other sections of your website will go here -->
+
+<!-- LinkedIn Stream -->
+<section id="linkedin-stream" style="background-color:#f3f6f8; padding:2rem; border-radius:8px; margin:2rem 0;">
+  <h2 style="color:#0077b5;">Latest on LinkedIn</h2>
+  <p>
+     <strong>Post:</strong> test post (just profile for rn)
+  </p>
+  <p>
+     <a href="https://www.linkedin.com/in/udayand?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" style="color:#0077b5; font-weight:bold;">
+      LinkedIn
+    </a>
+  </p>
+</section>
+
+<section id="contact-link" style="text-align: center; margin-top: 3rem;">
+  <a href="contact.html" class="contact-button">Go to Contact Page</a>
+</section>
+	
+<section id="carousel">
+    <div class="carousel-content">
+        <h2>Udayan Das</h2>
+        Computer Scientist, Educator, Writer<br/>
+        <a href="#about" class="btn">about me</a>
+    </div>
+</section>
+	
+<section id="about">
+    <div class="about-container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="UD_HS_web.jpg" alt="Profile Picture">
+            <div class="about-details">
+                <p>I am an associate professor and the founding program director of computer science at Saint Mary's College of California. My main area of research is Technical Language Processing (TLP). Current NLP approaches and LLMs are inadequate to dealing with the complexity of technical text that needs to be reasoned on in such a manner that the accuracy of the automated reading can be relied upon and the cross-referentiality of technical documentation can be captured. We are developing higher reliability Technical Language Models (TLMs) which are essentially knowledge-graph backed LLMs that can pinpoint where information was drawn from within a complex information environment.</p>
+
+				<p>Apart from that I am also keenly invested in ensuring that computing and technology is used for furthering social justice, and in challenging students to not only consider the harms as a result of computing technology, but to go beyond and consider how they could be designing and developing systems that always center justice and equity from the get go and throughout the process of design, development through deployment. This is inspired by such approaches as Design Justice and Values Sensitive Design but applied to a computing context.</p>
+
+				<p>I also like thinking about teaching methodologies and how to center fun in learning as well as removing barriers to access to CS education. In my spare time I like reading, creative writing, bird photography, and hiking. </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="publications">
+    <div class="publication-container">
+        <h2>Publications</h2>
+        <ul class="publication-list">
+	<li>
+             <button class="publication-button" onclick="window.location.href='reader.html'">
+  		  <img src="pubs/OpenStax_logo.svg" alt="Thumbnail Image 1" class="thumbnail">
+  		  <div class="publication-details">
+   		 	<b>Udayan Das</b>, Aubrey Lawson, Chris Mayfield, and Narges Norouzi
+   	     <h3>Introduction to Python Programming</h3>
+    			<h4>OpenStax: Free and open textbook platform from Rice University.</h4>
+ 	</div>
+      </button>
+            </li>
+            <li>
+                <button class="publication-button" onclick="window.open('pubs/HCII2024_LLMs.pdf', '_blank')">
+                    <img src="pubs/HCII2024.png" alt="Thumbnail Image 1" class="thumbnail">
+                    <div class="publication-details">
+						Andrew Kernycky, David Coleman, Christopher Spence, and <b>Udayan Das</b>
+                        <h3>Evaluating the Performance of LLMs on Technical Language Processing tasks</h3>
+						<h4>Accepted to HCII 2024</h4>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button class="publication-button" onclick="window.open('pubs/Das_Fulton_ASEE2024.pdf', '_blank')">
+                    <img src="pubs/Das_Fulton_ASEE2024.png" alt="Thumbnail Image 1" class="thumbnail">
+                    <div class="publication-details">
+						<b>Udayan Das</b> and Chris Fulton
+                        <h3>An Experience Report on Reducing Barriers by Removing Prerequisites for a CS1 Introductory Programming Course</h3>
+						<h4>Accepted to ASEE 2024.</h4>
+                    </div>
+                </button>
+            </li>
+			<li>
+                <button class="publication-button" onclick="window.open('pubs/ASEE_ethics.pdf', '_blank')">
+                    <img src="pubs/ASEE_ethics.png" alt="Thumbnail Image 1" class="thumbnail">
+                    <div class="publication-details">
+						<b>Udayan Das</b>
+                        <h3>A Directed Question based Framework for Teaching and Learning Ethics: A tool but also a Memorable Framework that Students can take Forward into their Professional Practice</h3>
+						<h4>Accepted to ASEE 2024.</h4>
+                    </div>
+                </button>
+            </li>
+			<!--li>
+                <button class="publication-button" onclick="window.open('https://dl.acm.org/doi/abs/10.1145/3626253.3635492', '_blank')">
+                    <img src="pubs/Das_Fulton_SIGCSE2024.png" alt="Thumbnail Image 1" class="thumbnail">
+                    <div class="publication-details">
+						<b>Udayan Das</b> and Chris Fulton
+                        <h3>Reducing Barriers to Entry by Removing Prerequisites for a CS1 Introductory Programming Course</h3>
+						<h4>ACM SIGCSE Technical Symposium 2024.</h4>
+                    </div>
+                </button>
+            </li>
+			<li>
+                <button class="publication-button" onclick="window.open('https://dl.acm.org/doi/abs/10.1145/3626253.3635496', '_blank')">
+                    <img src="pubs/Ethics.png" alt="Thumbnail Image 1" class="thumbnail">
+                    <div class="publication-details">
+						<b>Udayan Das</b>
+                        <h3>Centering Ethics in Computing Student's Mind: A Question Directed Approach for Teaching and Learning Tech Ethics</h3>
+						<h4>ACM SIGCSE Technical Symposium 2024.</h4>
+                    </div>
+                </button>
+            </li-->
+            <!-- Add more publications as needed -->
+        </ul>
+    </div>
+</section>
+</body>
+</html>
+
+

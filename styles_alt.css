@@ -1,0 +1,218 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Halant;
+}
+
+header {
+    background-color: #504c67;
+    color: #fff;
+    padding: 5px 0;
+    width: 100%;
+    z-index: 1000;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	font-size: 1.4rem;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover, .logo a:hover {
+    color: #ffd700;
+}
+
+/* CAROUSEL */
+
+#carousel {
+    background-image: url('joshua.png'); /* Replace 'joshua.png' with your image */
+    background-size: cover;
+    background-position:center center;
+    text-align: center;
+    color: #fff;
+    height: 80vh;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.carousel-content {
+    max-width: 800px;
+    margin: 5px;
+    margin: 0 auto;
+}
+
+.carousel-content h2 {
+    font-size: 3.25rem;
+    font-family: Halant;
+    margin-bottom: 1px;
+    background-color: rgba(0, 0, 0, 0.5); /* Set background color with transparency */
+    padding: 1px 1px; /* Add padding for spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
+}
+
+.carousel-content p {
+    font-size: 2rem;
+    font-family: Halant;
+    margin-bottom: 1px;
+    background-color: rgba(0, 0, 0, 0.5); /* Set background color with transparency */
+    padding: 1px 1px; /* Add padding for spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
+}
+
+.carousel-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #867fab;
+    color: #fff	;
+    text-decoration: none;
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
+}
+
+.carousel-content .btn:hover {
+    opacity: 0.75;
+}
+
+/* ABOUT */
+
+#about {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.about-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify; /* Align text within the container to the left */
+}
+
+.about-content img {
+    width: auto;
+    height: 35vh;
+    margin-right: 75px;
+    box-shadow: 0 0 40px rgba(134, 127, 171, 0.5);
+}
+
+.about-details {
+    text-align: justify; /* Align text within the details container to the left */
+    flex: 1;
+}
+
+.about-details p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* PUBLICATION */
+
+#publications {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #f1f2f6;
+}
+
+#publications h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.publication-container {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.publication-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: justify; /* Align text to the left within the button */
+}
+
+.publication-button:hover {
+    opacity: 0.8;
+}
+
+.publication-button img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.publication-button .publication-details {
+    flex: 1;
+}
+
+.publication-button h3 {
+    font-size: 1.5rem;
+}
+
+.publication-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.publication-list li {
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 20px;
+}
+
+.publication-details {
+    flex: 1;
+}
+
+@font-face {
+  font-family: 'Halant';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/halant/v14/u-4-0qaujRI2Pbsn2NhnsS5mew.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
