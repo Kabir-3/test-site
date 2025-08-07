@@ -14,6 +14,16 @@ function closeMobileMenu() {
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
+	<div id="intro-screen" style="position: fixed; inset: 0; background: black; z-index: 9999;">
+  <video id="intro-video" style="width: 100%; height: 100%; object-fit: cover;" playsinline>
+    <source src="undertaker.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <button id="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    padding: 1em 2em; font-size: 1.2em; background: white; border: none; cursor: pointer;">
+    Enter Site
+  </button>
+</div>
     <header>
         <div class="container">
             <div class="logo">
@@ -185,5 +195,24 @@ Don’t be another Elon. »
         </ul>
     </div>
 </section>
+	<script>
+  const playButton = document.getElementById('play-button');
+  const introVideo = document.getElementById('intro-video');
+  const introScreen = document.getElementById('intro-screen');
+
+  playButton.addEventListener('click', async () => {
+    try {
+      await introVideo.play();
+      playButton.style.display = 'none';
+
+      // When the video ends, hide intro screen
+      introVideo.addEventListener('ended', () => {
+        introScreen.style.display = 'none';
+      });
+    } catch (err) {
+      alert('Click to allow video playback');
+    }
+  });
+</script>
 </body>
 </html>
