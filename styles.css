@@ -134,15 +134,14 @@ nav ul li a:hover, .logo a:hover {
 	position: relative;
 	display: flex; /* Use flexbox */
 	flex-direction: column; /* Stack items vertically */
-    justify-content: flex-end; /* Align items to the bottom */
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-content {
     max-width: 800px;
 	position: relative;
-	bottom: 50px;
-	left: 50%;
-	transform: translateX(-50%);
+	
 }
 
 .carousel-content h2 {
